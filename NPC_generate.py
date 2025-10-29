@@ -44,3 +44,7 @@ if is_able_fight == True:
     is_able_fight == "is"
 elif is_able_fight == False:
     is_able_fight = "is not"
+
+for character in range(len(name_list)):
+    print(f"\nCharacter: {random.choice(name_list)}\n Age: {age_of_character}\n Occupation: {random.choice(occupations)}\n Ability to fight: {is_able_fight}")
+    time.sleep(1.0)
