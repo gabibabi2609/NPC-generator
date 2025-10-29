@@ -28,8 +28,7 @@ import time
 for name in range(len(name_list)):
     print(f"\nCharacter: {random.choice(name_list)}")
     print(f"Attributes: {random.choice(attributes)}, {random.choice(attributes)}, {random.choice(attributes)}")
-
-
+    
 occupations = ["blacksmith", "royal", "knight", "jester", "farmer", "cook"]
 
 for age in range(len(name_list)):
@@ -38,3 +37,10 @@ for age in range(len(name_list)):
         print(f"\nTheir occupation is: {random.choice(occupations)}\n")
     else:
         print("\nThey are too young to work\n")
+
+is_able_fight = random.choice([True, False])
+
+if is_able_fight == True:
+    is_able_fight == "is"
+elif is_able_fight == False:
+    is_able_fight = "is not"
