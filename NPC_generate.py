@@ -1,50 +1,32 @@
-npc_names = input("\nName ten random names: ")
-
-name_list = npc_names.split(", ")
-print(name_list)
-
-npc_list = []
-npc_list.append(npc_names)
+npc_names = input("Name ten different names: ")
+names_list = npc_names.split(", ") 
 
 
 attributes =  [
-    "bloodstained",
-    "faceless",
-    "rotting",
-    "whispering",
-    "cursed",
-    "shadowy",
-    "twisted",
-    "decayed",
-    "haunting",
-    "ashen",
-    "glowing",
-    "evil"
+     "loyal", "brave", "hardworking", "wise", "strong", "clever", "gentle", "humble", "prideful", "proud"
+    
 ]
 
 import random
 import time
 
-for name in range(len(name_list)):
-    print(f"\nCharacter: {random.choice(name_list)}")
-    print(f"Attributes: {random.choice(attributes)}, {random.choice(attributes)}, {random.choice(attributes)}")
     
 occupations = ["blacksmith", "royal", "knight", "jester", "farmer", "cook"]
 
-for age in range(len(name_list)):
-    age_of_character = int(input(f"\nHow old is {random.choice(name_list)}? "))
-    if age_of_character >= 7:
-        print(f"\nTheir occupation is: {random.choice(occupations)}\n")
-    else:
-        print("\nThey are too young to work\n")
 
-is_able_fight = random.choice([True, False])
 
-if is_able_fight == True:
-    is_able_fight == "is"
-elif is_able_fight == False:
-    is_able_fight = "is not"
+for name in range(len(names_list)):
+    age_of_character = int(input(f"\nHow old is {random.choice(names_list)}? "))
+    shilling_int = random.randint(100, 600)
+    shilling = shilling_int / 100.0
+    attributes = random.sample(attributes, 3)
+    trait1 = attributes[0]
+    trait2 = attributes[1]
+    trait3 = attributes[2]
+    is_able_fight = random.choice([True, False])
+    if is_able_fight == True:
+        fight_status ="Yes"
+    elif is_able_fight == False:
+        fight_status = "No"
 
-for character in range(len(name_list)):
-    print(f"\nCharacter: {random.choice(name_list)}\n Age: {age_of_character}\n Occupation: {random.choice(occupations)}\n Ability to fight: {is_able_fight}")
-    time.sleep(1.0)
+print(f"Character: {random.sample(names_list)}\nOccupation: {random.choice(occupations)}\nCan they fight? {fight_status}\nTraits: {trait1}, {trait2}, and {trait3}")
