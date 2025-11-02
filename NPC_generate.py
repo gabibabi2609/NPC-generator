@@ -24,5 +24,5 @@ for name in range(len(names_list)):
     elif is_able_fight == False:
         fight_status = "No"
 
-print(f"Character: {random.sample(names_list)}\nOccupation: {random.choice(occupations)}\nCan they fight? {fight_status}\nTraits: {random.choice(attributes)}, {random.choice(attributes)}, and {random.choice(attributes)}")
+print(f"Character: {random.sample(names_list)}\nOccupation: {random.choice(occupations)}\nCan they fight? {fight_status}")
 print("----------------------------------")
